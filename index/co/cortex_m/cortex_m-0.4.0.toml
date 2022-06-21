@@ -32,4 +32,3 @@ core = { type = "Enum", values = ["m0", "m0p", "m4", "m4f", "m7f", "m7df"] }
 commit = "7cfb8c9b2f03a5f461c113b6acf3b6245c627cc7"
 url = "git+https://github.com/Fabien-Chouteau/cortex-m.git"
 
-# Force build
