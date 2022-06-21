@@ -7,7 +7,7 @@ maintainers-logins = ["mosteo"]
 
 [[depends-on]]
 libhello = "^1.0"
-gnat = "^11"
+gnat_arm_elf = "^11"
 
 [origin]
 url = "https://github.com/alire-project/hello/archive/v1.0.1.tar.gz"
