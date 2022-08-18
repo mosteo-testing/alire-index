@@ -1,0 +1,18 @@
+name = "gnatstudio"
+version = "0.1"
+description = "The GNAT Studio"
+maintainers = ["chouteau@adacore.com"]
+maintainers-logins = ["Fabien-Chouteau"]
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+
+auto-gpr-with = false
+
+[configuration]
+disabled = true
+
+[environment]
+PATH.prepend = "${CRATE_ROOT}/bin"
+
+[origin."case(os)".linux."case(word-size)".bits-64]
+url = "https://github.com/mosteo/gnatstudio/releases/download/artifacts-1/gnatstudio-23.0w-20220512-x86_64-linux-bin.tgz"
+hashes = ["sha256:4a7a1a847b5e48bc32ee32390b86d3a870a7675c2f0fc5039315f804215838dc"]
