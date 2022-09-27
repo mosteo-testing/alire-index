@@ -114,7 +114,14 @@ jobs:
       if: matrix.os == 'windows-latest'
       run: C:\Users\runneradmin\.cache\alire\msys64\usr\bin\pacman --noconfirm -S tar
 
-    - name: Test crate (Windows/MacOS)
+    - name: Test crate (Windows/macOS)
       if: matrix.os != 'ubuntu-latest' # native testing in Windows/MacOS
       run: ${{env.CHECKS_REPO}}/scripts/gh-build-crate.sh
+      shell: bash
+
+    - name: Test crate (macOS + Homebrew)
+      if: matrix.os == 'macos-latest'
+      run: |
+        eval $(brew shellenv)
+        ${{env.CHECKS_REPO}}/scripts/gh-build-crate.sh
       shell: bash

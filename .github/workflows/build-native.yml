@@ -80,3 +80,10 @@ jobs:
     - name: Test crate
       run: ${{env.CHECKS_REPO}}/scripts/gh-build-crate.sh
       shell: bash
+
+    - name: Test crate (macOS + Homebrew)
+      if: matrix.os == 'macos-latest'
+      run: |
+        eval $(brew shellenv)
+        ${{env.CHECKS_REPO}}/scripts/gh-build-crate.sh
+      shell: bash
