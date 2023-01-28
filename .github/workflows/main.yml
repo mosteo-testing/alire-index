@@ -12,19 +12,11 @@ jobs:
 
     - name: Set up stable `alr`
       if: contains(github.base_ref, 'stable-')
-      uses: alire-project/setup-alire@v1
-      with:
-        version: 1.2.1
-
-    - name: Set up GNAT for devel `alr`
-      if: contains(github.base_ref, 'devel-')
-      uses: ada-actions/toolchain@ce2020
-      with:
-        distrib: fsf
+      uses: alire-project/setup-alire@v2
 
     - name: Set up devel `alr`
       if: contains(github.base_ref, 'devel-')
-      uses: alire-project/setup-alire@v1
+      uses: alire-project/setup-alire@v2
       with:
         branch: master
 
