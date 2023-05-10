@@ -10,6 +10,7 @@ on:
       - 'index/**.toml'
 
 jobs:
+
   check:
     runs-on: ubuntu-latest
     steps:
